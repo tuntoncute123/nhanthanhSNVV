@@ -62,7 +62,7 @@ const PhotoBook = ({ images }) => {
                     </Page>
                 ))}
 
-                <Cover title="The End" subtitle="With Lots of Love ❤️" />
+                <Cover title="The End" subtitle="Cảm ơn vì đã xem nhé! ❤️" />
             </HTMLFlipBook>
         </div>
     );

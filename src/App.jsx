@@ -7,19 +7,36 @@ import { Music } from 'lucide-react';
 import './App.css';
 
 // Import Images from Assets
+// Import Images from Assets
 import Img1 from './assets/memory_1.jpg';
 import Img2 from './assets/memory_2.jpg';
 import Img3 from './assets/memory_3.jpg';
 import Img4 from './assets/memory_4.jpg';
 import Img5 from './assets/memory_5.jpg';
 import Img6 from './assets/memory_6.png';
+import { Upload, Plus } from 'lucide-react';
 
-const images = [Img1, Img2, Img3, Img4, Img5, Img6];
+const INITIAL_IMAGES = [Img1, Img2, Img3, Img4, Img5, Img6];
 
 function App() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showBook, setShowBook] = useState(false);
+  const [images, setImages] = useState(INITIAL_IMAGES);
+  const fileInputRef = useRef(null);
+
+  // Load saved images from LocalStorage on mount
+  React.useEffect(() => {
+    const savedImages = localStorage.getItem('uploaded_memories');
+    if (savedImages) {
+      try {
+        const parsed = JSON.parse(savedImages);
+        setImages([...INITIAL_IMAGES, ...parsed]);
+      } catch (e) {
+        console.error("Failed to load images", e);
+      }
+    }
+  }, []);
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -29,6 +46,30 @@ function App() {
         audioRef.current.play();
       }
       setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String = reader.result;
+
+        // Update State
+        const newImages = [...images, base64String];
+        setImages(newImages);
+
+        // Update LocalStorage (Only save the new additions, not the imports)
+        // We filter out the initial images by slicing
+        const currentUploaded = newImages.slice(INITIAL_IMAGES.length);
+        try {
+          localStorage.setItem('uploaded_memories', JSON.stringify(currentUploaded));
+        } catch (error) {
+          alert("Storage full! Cannot save more photos locally.");
+        }
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -42,6 +83,26 @@ function App() {
       >
         <Music size={20} />
       </button>
+
+      {/* Upload Button */}
+      {showBook && (
+        <div className="upload-container">
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleFileUpload}
+            accept="image/*"
+            style={{ display: 'none' }}
+          />
+          <button
+            className="upload-btn"
+            onClick={() => fileInputRef.current.click()}
+            title="Add a Memory"
+          >
+            <Plus size={24} />
+          </button>
+        </div>
+      )}
 
       {/* Actual audio element */}
       <audio ref={audioRef} loop>
@@ -69,7 +130,8 @@ function App() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="book-wrapper"
             >
-              <PhotoBook images={images} />
+              {/* Key forces re-render when image count changes to fix FlipBook layout */}
+              <PhotoBook key={images.length} images={images} />
             </motion.div>
           )}
         </AnimatePresence>
