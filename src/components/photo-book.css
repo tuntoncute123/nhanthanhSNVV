@@ -30,15 +30,18 @@
 
 .book-cover {
     background-color: #7f1d1d;
-    background-image: /* Spine Highlight */
-    linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 5%, rgba(0, 0, 0, 0.3) 5%, transparent 10%), /* Damask-like Pattern */
-    radial-gradient(circle at 50% 50%, rgba(202, 138, 4, 0.15) 0%, transparent 10%), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px);
+    background-image:
+        /* Spine Highlight */
+        linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 5%, rgba(0, 0, 0, 0.3) 5%, transparent 10%),
+        /* Damask-like Pattern */
+        radial-gradient(circle at 50% 50%, rgba(202, 138, 4, 0.15) 0%, transparent 10%), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px);
     background-size: 100% 100%, 40px 40px, 20px 20px, 20px 20px;
     color: #fef08a;
     /* Soft Gold text */
     border: 1px solid #7f1d1d;
-    box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.4), /* Spine shadow inner */
-    5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.4),
+        /* Spine shadow inner */
+        5px 5px 15px rgba(0, 0, 0, 0.3);
     /* Drop shadow */
     display: flex;
     flex-direction: column;
@@ -170,6 +173,7 @@
         padding-bottom: 4rem;
         perspective: 1000px;
     }
+
     .cover-title {
         font-size: 1.8rem;
         /* Much smaller for mobile (was 3.5rem) */
@@ -177,19 +181,45 @@
         border-width: 3px;
         margin-bottom: 0.5rem;
     }
+
     .cover-content {
         padding: 1rem;
     }
+
     .book-cover::after {
         left: 15px;
         right: 10px;
         top: 10px;
         bottom: 10px;
     }
+
     .book-cover {
         padding-left: 5px;
     }
+
     .cover-subtitle {
         font-size: 1rem;
     }
+}
+
+.last-page-upload-btn {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fef08a;
+    /* Soft gold to match text */
+    color: #7f1d1d;
+    /* Deep red to match cover */
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    font-size: 0.9rem;
+    z-index: 20;
+}
+
+.last-page-upload-btn:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
 }

@@ -24,7 +24,7 @@ const Cover = forwardRef((props, ref) => {
     );
 });
 
-const PhotoBook = ({ images }) => {
+const PhotoBook = ({ images, triggerUpload }) => {
     const [isMobile, setIsMobile] = React.useState(window.innerWidth < 600);
 
     React.useEffect(() => {
@@ -62,7 +62,14 @@ const PhotoBook = ({ images }) => {
                     </Page>
                 ))}
 
-                <Cover title="The End" subtitle="Cảm ơn vì đã xem nhé! ❤️" />
+                <Cover title="The End" subtitle="Cảm ơn vì đã xem nhé! ❤️">
+                    <button
+                        className="last-page-upload-btn"
+                        onClick={triggerUpload}
+                    >
+                        + Thêm kỷ niệm
+                    </button>
+                </Cover>
             </HTMLFlipBook>
         </div>
     );

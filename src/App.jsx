@@ -131,7 +131,11 @@ function App() {
               className="book-wrapper"
             >
               {/* Key forces re-render when image count changes to fix FlipBook layout */}
-              <PhotoBook key={images.length} images={images} />
+              <PhotoBook
+                key={images.length}
+                images={images}
+                triggerUpload={() => fileInputRef.current.click()}
+              />
             </motion.div>
           )}
         </AnimatePresence>
