@@ -43,7 +43,9 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
-}.theme-decorations-container {
+}
+
+.theme-decorations-container {
     position: fixed;
     top: 0;
     left: 0;
