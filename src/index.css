@@ -1,0 +1,46 @@
+:root {
+  --background: #0f172a;
+  --primary: #f472b6;
+  --secondary: #c084fc;
+  --text: #f8fafc;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Split Background: Ice Blue/Purple (Left) -> Warm Pink/Red (Right) */
+  background: linear-gradient(90deg, #1e1b4b 0%, #312e81 45%, #831843 55%, #db2777 100%);
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
