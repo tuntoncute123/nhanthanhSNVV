@@ -8,6 +8,12 @@
     perspective: 1500px;
 }
 
+.flip-book {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+}
+
 .book-page {
     background-color: #fdf6e3;
     /* Paper color */
@@ -24,15 +30,22 @@
 
 .book-cover {
     background-color: #7f1d1d;
-    background-image: /* Spine Highlight */
-    linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 5%, rgba(0, 0, 0, 0.3) 5%, transparent 10%), /* Damask-like Pattern */
-    radial-gradient(circle at 50% 50%, rgba(202, 138, 4, 0.15) 0%, transparent 10%), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px);
+    background-image:
+        /* Spine Highlight */
+        linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 5%, rgba(0, 0, 0, 0.3) 5%, transparent 10%),
+        /* Damask-like Pattern */
+        radial-gradient(circle at 50% 50%, rgba(202, 138, 4, 0.15) 0%, transparent 10%),
+        repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px),
+        repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 10px);
     background-size: 100% 100%, 40px 40px, 20px 20px, 20px 20px;
+
     color: #fef08a;
     /* Soft Gold text */
     border: 1px solid #7f1d1d;
-    box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.4), /* Spine shadow inner */
-    5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        inset 4px 0 10px rgba(0, 0, 0, 0.4),
+        /* Spine shadow inner */
+        5px 5px 15px rgba(0, 0, 0, 0.3);
     /* Drop shadow */
     display: flex;
     flex-direction: column;
@@ -45,9 +58,7 @@
     /* Space for spine */
 }
 
-
 /* Gold Border Frame with Corner Dots */
-
 .book-cover::after {
     content: '';
     position: absolute;
@@ -63,9 +74,7 @@
     pointer-events: none;
 }
 
-
 /* Ornate Corner Flourishes - Simplified to thin elegant lines */
-
 .book-cover::before {
     content: '';
     position: absolute;
@@ -73,7 +82,11 @@
     right: 20px;
     bottom: 20px;
     left: 30px;
-    background: radial-gradient(circle at top left, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px), radial-gradient(circle at top right, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px), radial-gradient(circle at bottom left, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px), radial-gradient(circle at bottom right, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px);
+    background:
+        radial-gradient(circle at top left, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px),
+        radial-gradient(circle at top right, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px),
+        radial-gradient(circle at bottom left, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px),
+        radial-gradient(circle at bottom right, transparent 15px, #ca8a04 16px, #ca8a04 17px, transparent 18px);
     background-repeat: no-repeat;
     opacity: 0.8;
     pointer-events: none;
@@ -161,8 +174,10 @@
 @media (max-width: 600px) {
     .book-container {
         padding: 5px;
+        padding-bottom: 4rem;
         perspective: 1000px;
     }
+
     .cover-title {
         font-size: 1.8rem;
         /* Much smaller for mobile (was 3.5rem) */
@@ -170,18 +185,22 @@
         border-width: 3px;
         margin-bottom: 0.5rem;
     }
+
     .cover-content {
         padding: 1rem;
     }
+
     .book-cover::after {
         left: 15px;
         right: 10px;
         top: 10px;
         bottom: 10px;
     }
+
     .book-cover {
         padding-left: 5px;
     }
+
     .cover-subtitle {
         font-size: 1rem;
     }
