@@ -46,15 +46,15 @@
 
 .footer {
   position: fixed;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
-  padding: 0;
+  padding: 0.5rem 0;
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.75rem;
   line-height: 1;
-  z-index: 100;
+  z-index: 50;
   pointer-events: none;
   /* Let events pass through if needed, though text selection might be desired */
 }
