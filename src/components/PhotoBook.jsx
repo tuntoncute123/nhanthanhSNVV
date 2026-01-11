@@ -38,16 +38,16 @@ const PhotoBook = ({ images }) => {
     return (
         <div className="book-container">
             <HTMLFlipBook
-                width={isMobile ? 320 : 400}
-                height={isMobile ? 480 : 550}
+                width={isMobile ? 260 : 320}
+                height={isMobile ? 380 : 450}
                 size="stretch"
-                minWidth={300}
-                maxWidth={600}
-                minHeight={400}
-                maxHeight={800}
+                minWidth={200}
+                maxWidth={500}
+                minHeight={300}
+                maxHeight={600}
                 maxShadowOpacity={0.5}
                 showCover={true}
-                mobileScrollSupport={true}
+                mobileScrollSupport={false}
                 usePortrait={isMobile}
                 className="flip-book"
             >
