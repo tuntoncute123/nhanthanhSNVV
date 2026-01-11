@@ -45,7 +45,7 @@ function App() {
 
       {/* Actual audio element */}
       <audio ref={audioRef} loop>
-        <source src="https://cdn.pixabay.com/audio/2023/01/24/audio_34b6e5113d.mp3" type="audio/mpeg" />
+        {/* Audio source removed to prevent 403 error */}
       </audio>
 
       {/* Theme Decorations (Elsa & Snow White) */}
@@ -76,7 +76,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Made with ❤️ for Thanh Nhan</p>
+        <p>Made with ❤️ for Nhan Thanh</p>
       </footer>
     </div>
   );
