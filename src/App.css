@@ -1,60 +1,59 @@
 .app-container {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 
 .music-toggle {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 100;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .music-toggle:hover {
-  background: var(--primary);
-  transform: scale(1.1) rotate(15deg);
+    background: var(--primary);
+    transform: scale(1.1) rotate(15deg);
 }
 
 .music-toggle.playing {
-  background: var(--secondary);
-  animation: spin 3s linear infinite;
+    background: var(--secondary);
+    animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem 0;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 0.75rem;
-  line-height: 1;
-  z-index: 50;
-  pointer-events: none;
-  /* Let events pass through if needed, though text selection might be desired */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+    line-height: 1;
+    z-index: 50;
+    pointer-events: none;
+    /* Let events pass through if needed, though text selection might be desired */
 }
