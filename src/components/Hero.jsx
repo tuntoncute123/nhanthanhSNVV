@@ -58,7 +58,7 @@ const Hero = ({ onCelebrate }) => {
                     <PartyPopper size={48} className="hero-icon" />
                 </span>
                 <h1 className="hero-title">
-                    Happy Birthday <br /> Thanh Nhan!
+                    Happy Birthday <br /> Nhan Thanh!
                 </h1>
                 <p className="hero-desc">
                     Chúc bà có một ngày tràn ngập tiếng cười và những khoảnh khắc khó quên. Mong rằng năm nay sẽ đưa bạn đến gần hơn với ước mơ của mình!
