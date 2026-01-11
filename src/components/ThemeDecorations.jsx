@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './ThemeDecorations.css';
+import './Decorations.css';
 import ElsaImg from '../assets/Elsa.png';
 
 const ThemeDecorations = () => {
