@@ -7,12 +7,12 @@ import { Music } from 'lucide-react';
 import './App.css';
 
 // Import Images from Assets
-import Img1 from './assets/473070012_1740558580057774_5239471001285401567_n.jpg';
-import Img2 from './assets/484454819_1787555022024796_4972958348730029276_n_cleanup.jpg';
-import Img3 from './assets/498225368_661468486727573_3295657091496065542_n.jpg';
-import Img4 from './assets/z7382237923179_018ea54c6f6972b382f011c9793dbe61.jpg';
-import Img5 from './assets/z7382238993474_36e0efffa2ba24b798e8f488365bb7fc.jpg';
-import Img6 from './assets/Screenshot 2025-11-11 173229.png';
+import Img1 from './assets/memory_1.jpg';
+import Img2 from './assets/memory_2.jpg';
+import Img3 from './assets/memory_3.jpg';
+import Img4 from './assets/memory_4.jpg';
+import Img5 from './assets/memory_5.jpg';
+import Img6 from './assets/memory_6.png';
 
 const images = [Img1, Img2, Img3, Img4, Img5, Img6];
 

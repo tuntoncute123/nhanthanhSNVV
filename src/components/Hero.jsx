@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { PartyPopper } from 'lucide-react';
-import './Hero.css';
+import './hero-section.css';
 
 const Hero = ({ onCelebrate }) => {
     const launchConfetti = () => {

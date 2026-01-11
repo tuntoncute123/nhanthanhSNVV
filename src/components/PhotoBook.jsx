@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import './Book.css';
+import './photo-book.css';
 
 const Page = forwardRef((props, ref) => {
     return (
