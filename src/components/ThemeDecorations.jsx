@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-/* import './Decorations.css'; - Moved to index.css to fix Vercel build */
+
 import ElsaImg from '../assets/Elsa.png';
 
 const ThemeDecorations = () => {
