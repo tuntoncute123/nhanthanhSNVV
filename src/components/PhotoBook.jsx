@@ -51,7 +51,7 @@ const PhotoBook = ({ images }) => {
                 usePortrait={isMobile}
                 className="flip-book"
             >
-                <Cover title="Happy Birthday" subtitle="Thanh Nhan's Memories" />
+                <Cover title="Happy Birthday" subtitle="Nhan Thanh's Memories" />
 
                 {images.map((img, index) => (
                     <Page number={index + 1} key={index}>
